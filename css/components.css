@@ -856,15 +856,15 @@
   flex-shrink: 0;
 }
 
-/* ----- 11.bis Editorial Plus Frame (P3 — Magic MCP CTA-3 inspiré) ----- */
+/* ----- 11.bis Editorial Plus Frame v2 (P3 ajusté — visible mais sobre) ----- */
 .cta-banner__plus {
   position: absolute;
   z-index: 2;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   color: var(--color-gold);
-  opacity: 0.55;
+  opacity: 0.85;
   pointer-events: none;
   transition: opacity var(--dur-normal) var(--ease);
 }
@@ -872,12 +872,13 @@
   display: block;
   width: 100%;
   height: 100%;
+  stroke-width: 1.5;
 }
-.cta-banner__plus--tl { top:    var(--sp-3); left:  var(--sp-3); }
-.cta-banner__plus--tr { top:    var(--sp-3); right: var(--sp-3); }
-.cta-banner__plus--bl { bottom: var(--sp-3); left:  var(--sp-3); }
-.cta-banner__plus--br { bottom: var(--sp-3); right: var(--sp-3); }
-.cta-banner:hover .cta-banner__plus { opacity: 0.80; }
+.cta-banner__plus--tl { top:    var(--sp-4); left:  var(--sp-4); }
+.cta-banner__plus--tr { top:    var(--sp-4); right: var(--sp-4); }
+.cta-banner__plus--bl { bottom: var(--sp-4); left:  var(--sp-4); }
+.cta-banner__plus--br { bottom: var(--sp-4); right: var(--sp-4); }
+.cta-banner:hover .cta-banner__plus { opacity: 1; }
 
 .cta-banner__rule {
   position: absolute;
@@ -885,17 +886,17 @@
   bottom: var(--sp-7);
   left: 50%;
   width: 1px;
-  border-left: 1px dashed rgba(201, 161, 75, 0.18);
+  border-left: 1px dashed rgba(201, 161, 75, 0.40);
   z-index: 0;
   pointer-events: none;
 }
 
 @media (max-width: 600px) {
-  .cta-banner__plus { width: 14px; height: 14px; opacity: 0.45; }
-  .cta-banner__plus--tl, .cta-banner__plus--tr { top:    var(--sp-2); }
-  .cta-banner__plus--bl, .cta-banner__plus--br { bottom: var(--sp-2); }
-  .cta-banner__plus--tl, .cta-banner__plus--bl { left:  var(--sp-2); }
-  .cta-banner__plus--tr, .cta-banner__plus--br { right: var(--sp-2); }
+  .cta-banner__plus { width: 16px; height: 16px; opacity: 0.75; }
+  .cta-banner__plus--tl, .cta-banner__plus--tr { top:    var(--sp-3); }
+  .cta-banner__plus--bl, .cta-banner__plus--br { bottom: var(--sp-3); }
+  .cta-banner__plus--tl, .cta-banner__plus--bl { left:  var(--sp-3); }
+  .cta-banner__plus--tr, .cta-banner__plus--br { right: var(--sp-3); }
   .cta-banner__rule { display: none; }
 }
 

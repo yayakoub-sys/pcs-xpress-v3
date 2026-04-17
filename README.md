@@ -1,5 +1,9 @@
 # PCS XPRESS V3 — Production V1
 
+**Live** : https://pcs-xpress-v3-270.netlify.app
+**Repo** : https://github.com/yayakoub-sys/pcs-xpress-v3
+**Déploiement** : automatique depuis `main` via Netlify (chaque `git push` déclenche un build).
+
 Site statique premium. Stack : HTML / CSS / JS — zéro dépendance, zéro build.
 
 ## Lancer en local

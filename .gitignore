@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code local settings (keep out of public repo)
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env / secrets
+.env
+.env.local
+.env.*.local
+
+# Build / cache
+.cache/
+dist/
+build/
+
+# Temp
+*.tmp
+_*-template.html

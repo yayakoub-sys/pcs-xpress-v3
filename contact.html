@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — PCS XPRESS</title>
+<meta name="description" content="Contactez l'équipe PCS XPRESS Côte d'Ivoire. Nous répondons à votre demande sous 48 heures ouvrées.">
+<meta name="theme-color" content="#FD3F5C">
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="./index.html" class="site-logo"><img src="./assets/images/logos/logo-pcs-xpress.png" alt="PCS XPRESS" width="160" height="40"></a>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+  <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
+    <a href="./la-carte.html">La carte</a><a href="./tarifs.html">Tarifs</a><a href="./comment-ca-marche.html">Comment ça marche</a><a href="./points-de-vente.html">Points de vente</a><a href="./faq.html">Support</a>
+    <a href="./contact.html" class="btn btn--primary">Obtenir ma carte</a>
+  </nav>
+</div></header>
+
+<main>
+  <section class="hero" style="padding-block: var(--section-y) var(--sp-7);">
+    <div class="container stack text-center max-prose mx-auto">
+      <span class="hero__eyebrow">Contact</span>
+      <h1 class="hero__title" style="font-size: var(--fs-h1);">Parlons de votre carte.</h1>
+      <p class="hero__lead mx-auto">Écrivez-nous pour connaître le point de vente le plus proche, poser une question ou demander à être rappelé.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); align-items: start;">
+
+      <form class="form" onsubmit="event.preventDefault(); alert('Formulaire de démonstration. Le traitement sera branché lors de la mise en ligne.');">
+        <div class="form__row">
+          <label for="name">Nom complet</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="form__row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="form__row">
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+225 …">
+        </div>
+        <div class="form__row">
+          <label for="subject">Motif</label>
+          <select id="subject" name="subject">
+            <option>Obtenir une carte</option>
+            <option>Question sur un tarif</option>
+            <option>Recherche d'un point de vente</option>
+            <option>Problème technique</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="form__row">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg">Envoyer ma demande</button>
+      </form>
+
+      <aside class="stack">
+        <div>
+          <h3 style="margin-bottom: var(--sp-3);">Par téléphone</h3>
+          <p>Numéro de support : <strong>à communiquer au lancement</strong></p>
+        </div>
+        <div>
+          <h3 style="margin-bottom: var(--sp-3);">Par email</h3>
+          <p>contact@pcsxpress.ci <em>(provisoire)</em></p>
+        </div>
+        <div>
+          <h3 style="margin-bottom: var(--sp-3);">Horaires</h3>
+          <p>Lundi au samedi, 8 h 30 – 18 h 30 (heure Abidjan).</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom: var(--sp-3);">Adresse</h3>
+          <p>Adresse du siège à communiquer officiellement avant lancement.</p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col"><img src="./assets/images/logos/logo-pcs-xpress.png" alt="PCS XPRESS" style="height:36px;filter:brightness(0) invert(1);margin-bottom:var(--sp-4);"><p>La carte prépayée Mastercard pensée pour la Côte d'Ivoire.</p></div>
+    <div class="footer-col"><h4>Produit</h4><ul><li><a href="./la-carte.html">La carte</a></li><li><a href="./tarifs.html">Tarifs</a></li><li><a href="./comment-ca-marche.html">Comment ça marche</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="./faq.html">Questions fréquentes</a></li><li><a href="./points-de-vente.html">Points de vente</a></li><li><a href="./contact.html">Nous contacter</a></li></ul></div>
+    <div class="footer-col"><h4>Légal</h4><ul><li><a href="./mentions-legales.html">Mentions légales</a></li><li><a href="./mentions-legales.html#confidentialite">Confidentialité</a></li><li><a href="./mentions-legales.html#cookies">Cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; <span data-year>2026</span> PCS XPRESS Côte d'Ivoire.</span><span>Mastercard est une marque déposée.</span></div>
+</div></footer>
+<script src="./js/main.js" defer></script>
+</body>
+</html>

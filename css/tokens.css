@@ -1,0 +1,111 @@
+/* ============================================================
+   PCS XPRESS V3 — DESIGN TOKENS
+   Source : DESIGN_SYSTEM_MASTER.md + CHARTE_PCS_2021.pdf
+   Modifiable en un seul endroit. Toute valeur en dur hors de ce
+   fichier est interdite.
+   ============================================================ */
+
+:root {
+  /* ---------- COULEURS PRIMAIRES ---------- */
+  --color-rose:        #FD3F5C;   /* CTA, accents */
+  --color-rose-hover:  #e52f4c;
+  --color-violet:      #322B3A;   /* titres, texte foncé, footer */
+  --color-vert:        #01D39A;   /* prix, badges actifs */
+  --color-menthe:      #AAFFE5;   /* fond section avantages */
+  --color-gris:        #F5F5F8;   /* fond section alternée */
+  --color-blanc:       #FFFFFF;
+  --color-gold:        #C9A14B;   /* liseré premium */
+  --color-logo-rouge:  #e43625;   /* logo print uniquement */
+
+  /* ---------- COULEURS SÉMANTIQUES ---------- */
+  --color-border:      #E5E5EA;
+  --color-shadow:      rgba(0, 0, 0, 0.08);
+  --color-shadow-hover: rgba(253, 63, 92, 0.15);
+  --color-text:        #322B3A;
+  --color-text-muted:  #555555;
+  --color-success:     #22C55E;
+  --color-error:       #EF4444;
+
+  /* ---------- GRADIENTS ---------- */
+  --gradient-hero:    linear-gradient(160deg, var(--color-rose) 0%, var(--color-violet) 100%);
+  --gradient-cta:     linear-gradient(180deg, #3a3144 0%, #221c2a 100%);
+  --gradient-halo:    radial-gradient(ellipse at center, rgba(253,63,92,0.22), transparent 65%);
+  --gradient-halo-gold: radial-gradient(ellipse at center, rgba(201,161,75,0.30), transparent 70%);
+
+  /* ---------- COULEUR CRÈME DOUCE (fond sections sobres) ---------- */
+  --color-cream:       #FAFAF7;
+  --color-menthe-soft: #ECFFF7;
+
+  /* ---------- TYPOGRAPHIE ---------- */
+  --font-display: 'Montserrat Alternates', system-ui, sans-serif;
+  --font-body:    'Montserrat Alternates', system-ui, sans-serif;
+
+  --fs-h1-hero:  clamp(2.5rem, 6vw, 4.75rem);  /* ~40-76px */
+  --fs-h1:       clamp(2rem, 4.5vw, 3.375rem); /* ~32-54px */
+  --fs-h2:       clamp(1.75rem, 3.5vw, 3rem);  /* ~28-48px */
+  --fs-h3:       clamp(1.25rem, 2vw, 1.5rem);  /* ~20-24px */
+  --fs-h4:       clamp(1.125rem, 1.5vw, 1.25rem);
+  --fs-body:     clamp(1rem, 1.1vw, 1.125rem); /* 16-18px */
+  --fs-small:    0.875rem;                      /* 14px */
+  --fs-tagline:  clamp(3rem, 7vw, 5.5rem);      /* 48-88px */
+  --fs-prix:     clamp(2rem, 3.5vw, 2.875rem);  /* 32-46px */
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold: 800;
+  --fw-black:    900;
+
+  --lh-tight:    1.1;
+  --lh-snug:     1.2;
+  --lh-normal:   1.5;
+  --lh-relaxed:  1.6;
+
+  /* ---------- ESPACEMENTS ---------- */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  3rem;
+  --sp-8:  4rem;
+  --sp-9:  6rem;
+  --sp-10: 8rem;
+
+  /* ---------- LAYOUT ---------- */
+  --container-max: 1240px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --section-y:     clamp(3rem, 8vw, 6rem);
+
+  /* ---------- RADIUS ---------- */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 999px;
+
+  /* ---------- OMBRES ---------- */
+  --shadow-sm:  0 1px 3px var(--color-shadow);
+  --shadow-md:  0 8px 24px var(--color-shadow);
+  --shadow-lg:  0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-cta: 0 12px 28px var(--color-shadow-hover);
+  --shadow-card: 0 1px 2px rgba(50, 43, 58, 0.04), 0 8px 24px rgba(50, 43, 58, 0.05);
+  --shadow-product: drop-shadow(0 28px 48px rgba(50,43,58,0.32)) drop-shadow(0 8px 16px rgba(253,63,92,0.18));
+  --shadow-header: 0 4px 20px rgba(50, 43, 58, 0.06);
+
+  /* ---------- LAYOUT REFS ---------- */
+  --header-h:        72px;
+  --header-h-scrolled: 60px;
+
+  /* ---------- TRANSITIONS ---------- */
+  --ease:        cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast:    150ms;
+  --dur-normal:  250ms;
+  --dur-slow:    450ms;
+
+  /* ---------- BREAKPOINTS (documentaires, utilisés en media queries) ----
+     sm  640px   / md  768px  / lg  1024px  / xl  1280px  / 2xl 1536px
+  */
+}

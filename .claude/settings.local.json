@@ -13,7 +13,8 @@
       "Bash(npx -y @21st-dev/cli@latest --help)",
       "Bash(npx -y @21st-dev/cli@latest install --help)",
       "Bash(npx -y @21st-dev/cli@latest install claude)",
-      "Bash(MSYS_NO_PATHCONV=1 claude mcp add magic --env API_KEY=PLACEHOLDER_REPLACE_ME -- npx -y @21st-dev/magic@latest)"
+      "Bash(MSYS_NO_PATHCONV=1 claude mcp add magic --env API_KEY=PLACEHOLDER_REPLACE_ME -- npx -y @21st-dev/magic@latest)",
+      "mcp__magic__21st_magic_component_inspiration"
     ]
   }
 }

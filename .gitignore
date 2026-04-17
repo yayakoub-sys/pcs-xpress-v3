@@ -31,3 +31,6 @@ build/
 # Temp
 *.tmp
 _*-template.html
+
+# Local Netlify folder
+.netlify

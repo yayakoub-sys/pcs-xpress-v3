@@ -856,6 +856,49 @@
   flex-shrink: 0;
 }
 
+/* ----- 11.bis Editorial Plus Frame (P3 — Magic MCP CTA-3 inspiré) ----- */
+.cta-banner__plus {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: opacity var(--dur-normal) var(--ease);
+}
+.cta-banner__plus svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cta-banner__plus--tl { top:    var(--sp-3); left:  var(--sp-3); }
+.cta-banner__plus--tr { top:    var(--sp-3); right: var(--sp-3); }
+.cta-banner__plus--bl { bottom: var(--sp-3); left:  var(--sp-3); }
+.cta-banner__plus--br { bottom: var(--sp-3); right: var(--sp-3); }
+.cta-banner:hover .cta-banner__plus { opacity: 0.80; }
+
+.cta-banner__rule {
+  position: absolute;
+  top:    var(--sp-7);
+  bottom: var(--sp-7);
+  left: 50%;
+  width: 1px;
+  border-left: 1px dashed rgba(201, 161, 75, 0.18);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .cta-banner__plus { width: 14px; height: 14px; opacity: 0.45; }
+  .cta-banner__plus--tl, .cta-banner__plus--tr { top:    var(--sp-2); }
+  .cta-banner__plus--bl, .cta-banner__plus--br { bottom: var(--sp-2); }
+  .cta-banner__plus--tl, .cta-banner__plus--bl { left:  var(--sp-2); }
+  .cta-banner__plus--tr, .cta-banner__plus--br { right: var(--sp-2); }
+  .cta-banner__rule { display: none; }
+}
+
 /* ---------- 12. FOOTER ---------- */
 .site-footer {
   background: var(--color-violet);

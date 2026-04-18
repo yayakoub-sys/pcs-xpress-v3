@@ -388,7 +388,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--sp-4) 1.25rem;
+  gap: var(--sp-4);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -396,9 +396,9 @@
 .trust-band__item {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: var(--sp-2);
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.35;
   letter-spacing: 0.005em;
 }

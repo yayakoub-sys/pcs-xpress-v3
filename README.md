@@ -1,29 +1,43 @@
 # PCS XPRESS V3 — Production V1
 
-**Live** : https://pcs-xpress-v3-270.netlify.app
 **Repo** : https://github.com/yayakoub-sys/pcs-xpress-v3
-**Déploiement** : automatique depuis `main` via Netlify (chaque `git push` déclenche un build).
 
 Site statique premium. Stack : HTML / CSS / JS — zéro dépendance, zéro build.
 
-## Lancer en local
+## Cibles de déploiement (3 hébergeurs simultanés)
 
-Trois méthodes. Toutes valides.
+Chaque `git push origin main` déclenche en parallèle 3 déploiements distincts. Si l'un est bloqué (quota, panne), les 2 autres restent disponibles.
 
-**1. Python (le plus simple, aucune installation)**
+| Cible | URL | Build | Coût | Activation |
+|---|---|---|---|---|
+| **Netlify** (principal) | https://pcs-xpress-v3-270.netlify.app | ~10-15 s | Gratuit (free tier) | Déjà actif |
+| **Cloudflare Pages** (secours principal recommandé) | `https://<projet>.pages.dev` | ~30 s | Gratuit (bandwidth illimité, 500 builds/mois) | Procédure manuelle 5 min — voir `09-documentation/deploy-backup-flow.md` |
+| **GitHub Pages** (secours tertiaire — toujours dispo) | `https://yayakoub-sys.github.io/pcs-xpress-v3/` | ~1 min | Gratuit (illimité repo public) | Activation auto via `.github/workflows/deploy-pages.yml` (déjà committé) |
+
+## Lancer en local (preview de secours)
+
+**1. Script Node fourni (recommandé — aucune installation)**
+```
+cd 08-production
+node scripts/preview-local.cjs
+```
+Ouvre automatiquement http://localhost:8080 dans le navigateur.
+Supporte les pretty URLs (`/tarifs` → `tarifs.html`) comme Netlify.
+
+**2. Python (alternative — si Node indisponible)**
 ```
 cd 08-production
 python -m http.server 8080
 ```
 Ouvrir http://localhost:8080
 
-**2. Node (si http-server installé)**
+**3. Node http-server (alternative npm)**
 ```
 npx http-server 08-production -p 8080
 ```
 
-**3. Double-clic**
-Ouvrir `index.html` directement dans Chrome / Firefox / Edge. Les polices locales se chargeront en file:// dans la plupart des navigateurs récents.
+**4. Double-clic**
+Ouvrir `index.html` directement dans Chrome / Firefox / Edge. Fonctionne mais quelques limitations CORS sur fonts locales.
 
 ## Arborescence
 

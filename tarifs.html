@@ -136,28 +136,115 @@
 </main>
 
 <footer class="site-footer"><div class="container">
-  <div class="footer-grid">
-    <div class="footer-col footer-brand">
-      <img src="./assets/images/logos/logo-pcs-xpress-footer-white.png" alt="PCS XPRESS" width="94" height="40" style="margin-bottom:var(--sp-4);">
-      <p>La carte prépayée Mastercard pensée pour la Côte d'Ivoire. Accessible, fiable, utilisable partout.</p>
-      <address style="font-style: normal; margin-top: var(--sp-4); line-height: 1.7; font-size: 0.9rem; opacity: 0.95;">
+
+  <!-- Bandeau partenaires -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: clamp(var(--sp-5), 4vw, var(--sp-8)); padding-bottom: var(--sp-6); margin-bottom: var(--sp-7); border-bottom: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap;">
+    <span style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; opacity: 0.55; font-weight: 700;">Émise par · Acceptée par · Rechargeable via</span>
+    <img src="./assets/images/logos/partner-mansa-bank.png" alt="Mansa Bank" width="68" height="28" loading="lazy" style="height: 28px; width: auto; opacity: 0.85;">
+    <img src="./assets/images/logos/partner-mastercard.png" alt="Mastercard" width="56" height="34" loading="lazy" style="height: 28px; width: auto; opacity: 0.85;">
+    <img src="./assets/images/logos/partner-orange-money.png" alt="Orange Money" width="62" height="28" loading="lazy" style="height: 28px; width: auto; opacity: 0.85;">
+    <img src="./assets/images/logos/partner-mtn-momo.png" alt="MTN Mobile Money" width="62" height="28" loading="lazy" style="height: 28px; width: auto; opacity: 0.85;">
+    <span style="font-weight: 700; font-size: 0.9rem; opacity: 0.7;">Wave</span>
+  </div>
+
+  <!-- Grille principale : Contact prominent + Brand -->
+  <div style="display: grid; grid-template-columns: minmax(280px, 1.5fr) minmax(220px, 1fr); gap: var(--sp-7); margin-bottom: var(--sp-7);">
+
+    <!-- BLOC CONTACT — prominent -->
+    <div>
+      <p style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; margin: 0 0 var(--sp-3) 0;">Nous joindre</p>
+
+      <a href="tel:1382" style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) 0; color: inherit; text-decoration: none;">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.08); border-radius: 999px; flex-shrink: 0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span style="display: inline-flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 1.75rem; font-weight: 900; line-height: 1;">1382</span>
+          <span style="font-size: 0.85rem; opacity: 0.7;">Service client gratuit · 7 j / 7</span>
+        </span>
+      </a>
+
+      <a href="tel:+2252720239228" style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) 0; color: inherit; text-decoration: none; border-top: 1px solid rgba(255,255,255,0.06);">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.05); border-radius: 999px; flex-shrink: 0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span style="display: inline-flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 1.0625rem; font-weight: 700;">+225 27 20 23 92 28</span>
+          <span style="font-size: 0.8rem; opacity: 0.65;">Standard L-V 9 h – 17 h · Sam 10 h – 17 h</span>
+        </span>
+      </a>
+
+      <a href="https://wa.me/2250787770707" style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) 0; color: inherit; text-decoration: none; border-top: 1px solid rgba(255,255,255,0.06);">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: #25D366; border-radius: 999px; flex-shrink: 0;">
+          <svg viewBox="0 0 24 24" fill="#fff" width="22" height="22" aria-hidden="true"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.348.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.875 2.909 4.366 2.909 7.02-.004 5.444-4.46 9.885-9.94 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        </span>
+        <span style="display: inline-flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 1.0625rem; font-weight: 700;">+225 07 87 77 07 07</span>
+          <span style="font-size: 0.8rem; opacity: 0.65;">WhatsApp Hotline · 7 j / 7 · 10 h – 16 h</span>
+        </span>
+      </a>
+
+      <a href="mailto:info@pcs-xpress.ci" style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) 0; color: inherit; text-decoration: none; border-top: 1px solid rgba(255,255,255,0.06);">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.05); border-radius: 999px; flex-shrink: 0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <span style="display: inline-flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 1.0625rem; font-weight: 700;">info@pcs-xpress.ci</span>
+          <span style="font-size: 0.8rem; opacity: 0.65;">Réponse sous 48 h ouvrées</span>
+        </span>
+      </a>
+
+      <a href="./contact.html" style="display: inline-flex; align-items: center; gap: 0.5em; margin-top: var(--sp-4); padding: 0.65em 1.25em; background: rgba(255,255,255,0.08); color: inherit; text-decoration: none; border-radius: 999px; font-weight: 700; font-size: 0.9rem; transition: background 0.2s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Faire une réclamation
+      </a>
+    </div>
+
+    <!-- BLOC BRAND -->
+    <div>
+      <img src="./assets/images/logos/logo-pcs-xpress-footer-white.png" alt="PCS XPRESS" width="94" height="40" style="margin-bottom: var(--sp-4);">
+      <p style="font-size: 0.95rem; opacity: 0.85; margin-bottom: var(--sp-4);">La carte prépayée Mastercard pensée pour la Côte d'Ivoire.</p>
+      <address style="font-style: normal; line-height: 1.7; font-size: 0.875rem; opacity: 0.85;">
         <strong>Compagnie Financière de Paiements SA</strong><br>
+        Capital 1 104 000 000 FCFA · RCCM CI-ABJ62018-B-08964<br>
         Abidjan, Le Plateau<br>
-        Immeuble TANASA, Bd de la République<br>
-        <br>
-        <strong>1382</strong> · service client gratuit<br>
-        Standard&nbsp;: <a href="tel:+2252720239228" style="color: inherit;">+225 27 20 23 92 28</a><br>
-        WhatsApp&nbsp;: <a href="https://wa.me/2250787770707" style="color: inherit;">+225 07 87 77 07 07</a><br>
-        <a href="mailto:info@pcs-xpress.ci" style="color: inherit;">info@pcs-xpress.ci</a>
+        Immeuble TANASA, Bd de la République
       </address>
-      <p style="margin-top: var(--sp-3); font-size: 0.85rem; opacity: 0.75;">
+      <p style="margin-top: var(--sp-4); font-size: 0.85rem; opacity: 0.7;">
         Carte émise par <strong>Mansa Bank</strong> sous licence Mastercard.
       </p>
     </div>
-    <div class="footer-col"><h4>Produit</h4><ul><li><a href="./la-carte.html">La carte</a></li><li><a href="./tarifs.html">Tarifs</a></li><li><a href="./comment-ca-marche.html">Comment ça marche</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="./faq.html">Questions fréquentes</a></li><li><a href="./points-de-vente.html">Points de vente</a></li><li><a href="./contact.html">Nous contacter</a></li></ul></div>
-    <div class="footer-col"><h4>Légal</h4><ul><li><a href="./mentions-legales.html">Mentions légales</a></li><li><a href="./mentions-legales.html#confidentialite">Confidentialité</a></li><li><a href="./mentions-legales.html#cookies">Cookies</a></li></ul></div>
+
   </div>
+
+  <!-- Liens secondaires Produit / Support / Légal -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--sp-5); padding-top: var(--sp-6); border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem;">
+    <div>
+      <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.55; margin: 0 0 var(--sp-3) 0; font-weight: 800;">Produit</h4>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2);">
+        <li><a href="./la-carte.html" style="color: inherit; opacity: 0.85;">La carte</a></li>
+        <li><a href="./tarifs.html" style="color: inherit; opacity: 0.85;">Tarifs</a></li>
+        <li><a href="./comment-ca-marche.html" style="color: inherit; opacity: 0.85;">Comment ça marche</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.55; margin: 0 0 var(--sp-3) 0; font-weight: 800;">Support</h4>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2);">
+        <li><a href="./faq.html" style="color: inherit; opacity: 0.85;">Questions fréquentes</a></li>
+        <li><a href="./points-de-vente.html" style="color: inherit; opacity: 0.85;">Points de vente</a></li>
+        <li><a href="./contact.html" style="color: inherit; opacity: 0.85;">Nous contacter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.55; margin: 0 0 var(--sp-3) 0; font-weight: 800;">Légal</h4>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2);">
+        <li><a href="./mentions-legales.html" style="color: inherit; opacity: 0.85;">Mentions légales</a></li>
+        <li><a href="./mentions-legales.html#confidentialite" style="color: inherit; opacity: 0.85;">Confidentialité</a></li>
+        <li><a href="./mentions-legales.html#cookies" style="color: inherit; opacity: 0.85;">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="footer-bottom"><span>&copy; <span data-year>2026</span> PCS XPRESS Côte d'Ivoire. Tous droits réservés.</span><span>Mastercard est une marque déposée de Mastercard International Incorporated.</span></div>
 </div></footer>
 <script src="./js/main.js" defer></script>

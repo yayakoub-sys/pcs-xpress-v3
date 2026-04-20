@@ -73,24 +73,43 @@
 
   <section class="section">
     <div class="container">
-      <header class="stack-sm" style="margin-bottom: var(--sp-7);">
-        <span class="badge">Abidjan & périphérie</span>
-        <h2>Le réseau le plus dense de la capitale.</h2>
-        <p>Notre réseau couvre l'ensemble des grandes communes du District autonome d'Abidjan. Cherchez par commune ci-dessous, ou appelez le <strong>1382</strong> (gratuit) pour le partenaire le plus proche de votre adresse exacte.</p>
+      <header class="stack-sm" style="margin-bottom: var(--sp-6);">
+        <span class="badge">Trouver un point de vente</span>
+        <h2>Plus de 10 000 partenaires à travers le pays.</h2>
+        <p>Recherchez par commune ou par ville. Ne trouvez pas la vôtre&nbsp;? Appelez le <strong>1382</strong> (gratuit) ou <strong>+225 27 20 23 92 28</strong>&nbsp;— on vous oriente en direct vers le partenaire le plus proche.</p>
       </header>
 
-      <div class="pos-list">
-        <article class="pos-card"><div class="pos-card__name">Cocody</div><p class="pos-card__addr">~930 points de vente — 2 Plateaux, Riviera, Angré, Faya, Bonoumin, Mermoz</p></article>
-        <article class="pos-card"><div class="pos-card__name">Yopougon</div><p class="pos-card__addr">~928 points — Niangon, Selmer, Sicogi, Ananeraie, Toits Rouges, Académie</p></article>
-        <article class="pos-card"><div class="pos-card__name">Abobo</div><p class="pos-card__addr">~562 points — N'Dotré, PK 18, Anonkoua-Kouté, Banco, Belleville</p></article>
-        <article class="pos-card"><div class="pos-card__name">Marcory</div><p class="pos-card__addr">~210 points — Zone 4, Anoumabo, Biétry, Remblais</p></article>
-        <article class="pos-card"><div class="pos-card__name">Plateau</div><p class="pos-card__addr">~150 points — Centre administratif et financier</p></article>
-        <article class="pos-card"><div class="pos-card__name">Treichville</div><p class="pos-card__addr">~120 points — Zones marchés et résidentielles</p></article>
-        <article class="pos-card"><div class="pos-card__name">Adjamé</div><p class="pos-card__addr">~180 points — 220 Logements, Williamsville, Port-Bouët 2</p></article>
-        <article class="pos-card"><div class="pos-card__name">Koumassi</div><p class="pos-card__addr">~140 points — Zone résidentielle et grands marchés</p></article>
+      <div class="pos-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <label for="pos-search-input" class="sr-only">Rechercher une ville ou commune</label>
+        <input type="search" id="pos-search-input" placeholder="Cherchez votre commune ou ville (ex. Cocody, Bouaké, San-Pédro…)" autocomplete="off">
       </div>
 
-      <p style="text-align: center; margin-top: var(--sp-7); color: var(--color-text-muted); font-size: 0.95rem;">Et plus de <strong>5 000 points</strong> dans les autres communes d'Abidjan, ainsi que <strong>4 000 points</strong> dans les villes de l'intérieur — Bouaké, Daloa, Yamoussoukro, San-Pédro, Korhogo, Man, Gagnoa, Abengourou, Bondoukou et plus.</p>
+      <div class="pos-list" id="pos-list">
+        <article class="pos-card" data-city="cocody 2 plateaux riviera angre faya bonoumin mermoz abidjan"><div class="pos-card__name">Cocody <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~930 points — 2 Plateaux, Riviera, Angré, Faya, Bonoumin, Mermoz</p></article>
+        <article class="pos-card" data-city="yopougon niangon selmer sicogi ananeraie toits rouges academie abidjan"><div class="pos-card__name">Yopougon <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~928 points — Niangon, Selmer, Sicogi, Ananeraie, Toits Rouges, Académie</p></article>
+        <article class="pos-card" data-city="abobo ndotre n'dotre pk 18 anonkoua koute banco belleville abidjan"><div class="pos-card__name">Abobo <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~562 points — N'Dotré, PK 18, Anonkoua-Kouté, Banco, Belleville</p></article>
+        <article class="pos-card" data-city="marcory zone 4 anoumabo bietry remblais abidjan"><div class="pos-card__name">Marcory <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~210 points — Zone 4, Anoumabo, Biétry, Remblais</p></article>
+        <article class="pos-card" data-city="plateau centre administratif financier abidjan"><div class="pos-card__name">Plateau <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~150 points — Centre administratif et financier</p></article>
+        <article class="pos-card" data-city="treichville marche residentiel abidjan"><div class="pos-card__name">Treichville <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~120 points — Zones marchés et résidentielles</p></article>
+        <article class="pos-card" data-city="adjame 220 logements williamsville port bouet abidjan"><div class="pos-card__name">Adjamé <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~180 points — 220 Logements, Williamsville, Port-Bouët 2</p></article>
+        <article class="pos-card" data-city="koumassi marche residentiel abidjan"><div class="pos-card__name">Koumassi <span class="pos-card__region pos-card__region--abidjan">Abidjan</span></div><p class="pos-card__addr">~140 points — Zone résidentielle et grands marchés</p></article>
+
+        <article class="pos-card" data-city="bouake capitale centre baoule 2eme ville"><div class="pos-card__name">Bouaké <span class="pos-card__region pos-card__region--interieur">Centre</span></div><p class="pos-card__addr">Couverture complète — 2ᵉ ville du pays, axes commerciaux et quartiers majeurs</p></article>
+        <article class="pos-card" data-city="yamoussoukro capitale politique"><div class="pos-card__name">Yamoussoukro <span class="pos-card__region pos-card__region--interieur">Centre</span></div><p class="pos-card__addr">Capitale politique — administrations, zone marchande, quartiers résidentiels</p></article>
+        <article class="pos-card" data-city="san pedro sud ouest port"><div class="pos-card__name">San-Pédro <span class="pos-card__region pos-card__region--interieur">Sud-Ouest</span></div><p class="pos-card__addr">Pôle portuaire — centre-ville, zones commerciales et résidentielles</p></article>
+        <article class="pos-card" data-city="daloa centre ouest bete"><div class="pos-card__name">Daloa <span class="pos-card__region pos-card__region--interieur">Centre-Ouest</span></div><p class="pos-card__addr">Grand carrefour régional — marchés centraux et principaux quartiers</p></article>
+        <article class="pos-card" data-city="korhogo nord senoufo"><div class="pos-card__name">Korhogo <span class="pos-card__region pos-card__region--interieur">Nord</span></div><p class="pos-card__addr">Capitale régionale du Nord — couverture centre-ville et axes principaux</p></article>
+        <article class="pos-card" data-city="man ouest montagne"><div class="pos-card__name">Man <span class="pos-card__region pos-card__region--interieur">Ouest</span></div><p class="pos-card__addr">Région des 18 Montagnes — centre-ville et zones commerçantes</p></article>
+        <article class="pos-card" data-city="gagnoa centre ouest"><div class="pos-card__name">Gagnoa <span class="pos-card__region pos-card__region--interieur">Centre-Ouest</span></div><p class="pos-card__addr">Axes marchés et quartiers résidentiels principaux</p></article>
+        <article class="pos-card" data-city="abengourou est"><div class="pos-card__name">Abengourou <span class="pos-card__region pos-card__region--interieur">Est</span></div><p class="pos-card__addr">Couverture centre-ville et axes commerçants de l'Indénié</p></article>
+        <article class="pos-card" data-city="bondoukou nord est"><div class="pos-card__name">Bondoukou <span class="pos-card__region pos-card__region--interieur">Nord-Est</span></div><p class="pos-card__addr">Partenaires sur axes marché et zones centre-ville</p></article>
+      </div>
+
+      <div class="pos-empty" id="pos-empty" hidden>
+        <p><strong>Aucune correspondance pour votre recherche.</strong></p>
+        <p style="margin-top: var(--sp-2);">Appelez le <a href="tel:1382" style="color: var(--color-rose); font-weight: 700;">1382</a> (gratuit) ou WhatsApp <a href="https://wa.me/2250787770707" style="color: var(--color-rose); font-weight: 700;">+225 07 87 77 07 07</a> — on vous oriente directement.</p>
+      </div>
     </div>
   </section>
 
@@ -222,5 +241,30 @@
   <div class="footer-bottom"><span>&copy; <span data-year>2026</span> PCS XPRESS Côte d'Ivoire. Tous droits réservés.</span><span>Mastercard est une marque déposée de Mastercard International Incorporated.</span></div>
 </div></footer>
 <script src="./js/main.js" defer></script>
+<script>
+  (function() {
+    var input = document.getElementById('pos-search-input');
+    var list = document.getElementById('pos-list');
+    var empty = document.getElementById('pos-empty');
+    if (!input || !list || !empty) return;
+    var cards = list.querySelectorAll('.pos-card');
+    function normalize(s) {
+      return (s || '').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    function filter() {
+      var q = normalize(input.value);
+      var visible = 0;
+      cards.forEach(function(c) {
+        if (!q || normalize(c.getAttribute('data-city') + ' ' + c.textContent).indexOf(q) !== -1) {
+          c.hidden = false; visible++;
+        } else { c.hidden = true; }
+      });
+      empty.hidden = (visible > 0);
+    }
+    input.addEventListener('input', filter);
+  })();
+</script>
 </body>
 </html>

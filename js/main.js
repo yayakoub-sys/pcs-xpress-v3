@@ -65,4 +65,35 @@ document.addEventListener('DOMContentLoaded', () => {
       a.classList.add('is-active');
     }
   });
+
+  // --- Scroll reveal (fadeInUp) via IntersectionObserver ---
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    // Cibles : sections principales + cards + features + témoignages + sections__head
+    const selectors = [
+      'main > section:not(.hero):not(.page-attente) .section__head',
+      'main > section:not(.hero) .features-grid > *',
+      'main > section:not(.hero) .testimonials-grid > *',
+      'main > section:not(.hero) .steps > *',
+      'main > section:not(.hero) .pos-card',
+      'main > section:not(.hero) .cta-banner',
+      'main > section:not(.hero) .stack-lg > section'
+    ];
+    const targets = document.querySelectorAll(selectors.join(','));
+    if (targets.length > 0) {
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (Math.min(i, 4) * 80) + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+      targets.forEach((el) => io.observe(el));
+    }
+  }
 });

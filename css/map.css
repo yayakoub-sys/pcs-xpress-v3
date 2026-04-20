@@ -1,6 +1,10 @@
-/* PCS XPRESS V3 — map.css
-   Styles dédiés à la carte interactive Leaflet (points-de-vente.html uniquement).
+/* PCS XPRESS V3 — map.css v2
+   Carte interactive Leaflet premium (points-de-vente.html uniquement).
 */
+
+/* =========================================
+   Container & sizing
+   ========================================= */
 
 .map-section {
   padding-block: var(--sp-7) var(--sp-8);
@@ -8,35 +12,49 @@
 
 .map-wrapper {
   position: relative;
-  border-radius: var(--radius-lg, 18px);
+  border-radius: var(--radius-lg, 20px);
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background: #fff;
 }
 
 #pos-map {
   width: 100%;
-  height: 540px;
+  height: 640px;
   z-index: 0;
-  background: #f4f4f2;
+  background: #eff1ed;
 }
 
-@media (max-width: 768px) {
-  #pos-map {
-    height: 380px;
-  }
+@media (max-width: 960px) {
+  #pos-map { height: 520px; }
 }
 
-/* Chips filter bar */
+@media (max-width: 560px) {
+  #pos-map { height: 460px; }
+}
+
+/* =========================================
+   Filter bar (premium)
+   ========================================= */
+
+.pos-map-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 .pos-map-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-2, 8px);
-  padding: var(--sp-4, 16px) var(--sp-5, 20px);
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  background: #fff;
+  gap: 8px;
   align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .pos-map-filters__label {
@@ -44,33 +62,28 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted, #666);
-  margin-right: var(--sp-2, 8px);
+  color: var(--color-text-muted, #777);
+  margin-right: 4px;
+  flex-shrink: 0;
 }
 
 .pos-filter-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.45em 0.95em;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5em 1em;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-family: inherit;
+  font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
   background: #fff;
   color: #322B3A;
   user-select: none;
   line-height: 1.2;
-}
-
-.pos-filter-chip input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  width: 0;
-  height: 0;
+  white-space: nowrap;
 }
 
 .pos-filter-chip__dot {
@@ -84,6 +97,7 @@
 
 .pos-filter-chip:hover {
   border-color: #322B3A;
+  transform: translateY(-1px);
 }
 
 .pos-filter-chip--active {
@@ -96,30 +110,180 @@
   box-shadow: 0 0 0 2px #322B3A, 0 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
-/* Custom divIcon marker */
+.pos-filter-chip--all {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.pos-filter-chip--all.pos-filter-chip--active {
+  background: linear-gradient(135deg, #C9A14B 0%, #8a6a28 100%);
+  border-color: #8a6a28;
+  box-shadow: 0 4px 12px rgba(200, 161, 75, 0.3);
+}
+
+/* View buttons (right side of controls) */
+.pos-map-views {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pos-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4em 0.85em;
+  background: rgba(50, 43, 58, 0.04);
+  color: #322B3A;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.pos-view-btn:hover {
+  background: rgba(50, 43, 58, 0.1);
+}
+
+.pos-view-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================================
+   PCS XPRESS Markers (priority, not clustered)
+   ========================================= */
+
 .pos-marker {
+  background: transparent !important;
+  border: none !important;
+  position: relative;
+}
+
+.pos-marker--pcs {
   display: flex !important;
   align-items: center;
   justify-content: center;
+}
+
+/* Pulse glow behind PCS markers for visibility */
+.pos-marker__pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: pcsPulse 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.pos-marker--lg .pos-marker__pulse { width: 40px; height: 40px; }
+.pos-marker--md .pos-marker__pulse { width: 30px; height: 30px; }
+.pos-marker--sm .pos-marker__pulse { width: 22px; height: 22px; opacity: 0.12; animation: none; }
+
+@keyframes pcsPulse {
+  0%   { transform: translate(-50%, -50%) scale(0.85); opacity: 0.35; }
+  70%  { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+.pos-marker__dot {
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.18s ease;
+  z-index: 2;
+}
+
+.pos-marker--lg .pos-marker__dot { width: 22px; height: 22px; }
+.pos-marker--md .pos-marker__dot { width: 18px; height: 18px; }
+.pos-marker--sm .pos-marker__dot { width: 14px; height: 14px; border-width: 2px; }
+
+.pos-marker--pcs:hover .pos-marker__dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.35), 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   POI Markers (smaller, flatter, clustered)
+   ========================================= */
+
+.pos-marker--poi {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.pos-marker__pin {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  display: block;
+  opacity: 0.92;
+}
+
+.pos-marker--poi:hover .pos-marker__pin {
+  transform: scale(1.25);
+  opacity: 1;
+}
+
+/* =========================================
+   Clusters
+   ========================================= */
+
+.pos-cluster {
   background: transparent !important;
   border: none !important;
 }
 
-.pos-marker__dot {
-  width: 18px;
-  height: 18px;
+.pos-cluster__inner {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.78rem;
   border: 3px solid #fff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.18), 0 6px 16px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.18s;
+}
+
+.pos-cluster__count {
   display: block;
-  transition: transform 0.18s ease;
+  line-height: 1;
 }
 
-.pos-marker:hover .pos-marker__dot {
-  transform: scale(1.18);
+.pos-cluster:hover .pos-cluster__inner {
+  transform: scale(1.08);
 }
 
-/* Leaflet popup premium override */
+/* Override leaflet.markercluster default styles we don't want */
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease;
+}
+
+/* =========================================
+   Leaflet popup premium override
+   ========================================= */
+
 .leaflet-popup-content-wrapper {
   border-radius: 14px !important;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18) !important;
@@ -128,41 +292,37 @@
 
 .leaflet-popup-content {
   margin: 0 !important;
-  padding: 18px 20px !important;
+  padding: 16px 20px !important;
   font-family: inherit !important;
   line-height: 1.55 !important;
-  min-width: 220px;
-}
-
-.leaflet-popup-tip {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+  min-width: 200px;
 }
 
 .pos-popup__cat {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 800;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .pos-popup__name {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 900;
   margin: 0 0 4px 0;
   color: #1a1a1a;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .pos-popup__subtitle {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--color-text-muted, #6a6a6a);
   font-weight: 600;
   margin: 0 0 10px 0;
 }
 
 .pos-popup__desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   margin: 0 0 10px 0;
   color: #2a2a2a;
 }
@@ -174,6 +334,13 @@
   margin: 0 0 10px 0;
   padding-top: 8px;
   border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.pos-popup__source {
+  font-size: 0.7rem;
+  color: #999;
+  font-style: italic;
+  margin: 4px 0 0 0;
 }
 
 .pos-popup__services {
@@ -192,31 +359,67 @@
   letter-spacing: 0.02em;
 }
 
-/* Leaflet controls */
+/* =========================================
+   Leaflet controls polish
+   ========================================= */
+
 .leaflet-control-attribution {
   background: rgba(255, 255, 255, 0.88) !important;
   font-size: 10px !important;
   padding: 2px 6px !important;
 }
 
-.leaflet-control-zoom a {
-  border-radius: 8px !important;
-  border: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  color: #322B3A !important;
-  font-weight: 900 !important;
-}
-
 .leaflet-control-zoom {
   border: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  margin: 14px !important;
 }
 
-/* Legend caption below map */
+.leaflet-control-zoom a {
+  background: #fff !important;
+  color: #322B3A !important;
+  font-weight: 900 !important;
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  font-size: 18px !important;
+  border: none !important;
+}
+
+.leaflet-control-zoom a:first-child {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.leaflet-control-zoom a:last-child {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f6f6f4 !important;
+  color: #C9A14B !important;
+}
+
+/* =========================================
+   Legend & caption
+   ========================================= */
+
 .map-caption {
-  margin-top: var(--sp-4, 16px);
-  font-size: 0.82rem;
+  margin-top: var(--sp-4);
+  font-size: 0.85rem;
   color: var(--color-text-muted, #666);
   text-align: center;
-  line-height: 1.55;
+  line-height: 1.6;
+}
+
+.map-caption strong {
+  color: #322B3A;
+}
+
+#pos-map-info {
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #888);
+  font-weight: 600;
 }

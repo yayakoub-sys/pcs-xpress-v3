@@ -1,0 +1,203 @@
+[
+  {
+    "id": "cfp-siege",
+    "category": "assistance",
+    "name": "Siège PCS XPRESS",
+    "subtitle": "Compagnie Financière de Paiements SA",
+    "description": "Bureau corporate. Assistance clientèle sur place. Centre d'appels 1382 (gratuit) et WhatsApp +225 07 87 77 07 07 joignables 7 j / 7.",
+    "address": "Immeuble TANASA, Bd de la République, Le Plateau, Abidjan",
+    "lat": 5.3244,
+    "lng": -4.0197,
+    "services": ["assistance"]
+  },
+  {
+    "id": "ab-plateau",
+    "category": "zone-strategique",
+    "name": "Plateau",
+    "subtitle": "Cœur économique · Abidjan",
+    "description": "Forte densité de boutiquiers, kiosques et stations-service partenaires. Achat et recharge largement disponibles sur les axes Bd de la République, Bd Roume et Avenue Chardy.",
+    "lat": 5.3237,
+    "lng": -4.018,
+    "services": ["achat", "recharge", "assistance"]
+  },
+  {
+    "id": "ab-cocody",
+    "category": "zone-strategique",
+    "name": "Cocody",
+    "subtitle": "Riviera · II Plateaux · Angré",
+    "description": "Grande couverture résidentielle. Boutiquiers, supérettes et centres commerciaux distribuent et rechargent la carte sur les principaux axes du quartier.",
+    "lat": 5.3533,
+    "lng": -3.9841,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-yopougon",
+    "category": "zone-strategique",
+    "name": "Yopougon",
+    "subtitle": "Commune la plus peuplée · Abidjan",
+    "description": "Maillage distributeurs dense le long du boulevard principal et sur les secteurs Niangon, Sideci, Académie et Andokoi.",
+    "lat": 5.3431,
+    "lng": -4.0858,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-marcory",
+    "category": "zone-strategique",
+    "name": "Marcory",
+    "subtitle": "Zone 4 · Anoumabo",
+    "description": "Quartier d'affaires et commercial. Couverture achat et recharge assurée dans la plupart des secteurs, notamment le long du Bd Valéry Giscard d'Estaing.",
+    "lat": 5.2885,
+    "lng": -3.9953,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-treichville",
+    "category": "zone-strategique",
+    "name": "Treichville",
+    "subtitle": "Quartier populaire · Abidjan",
+    "description": "Marchés, commerces et kiosques offrent de nombreux points pour recharger la carte et la retrouver en format physique.",
+    "lat": 5.2912,
+    "lng": -4.0203,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-adjame",
+    "category": "zone-strategique",
+    "name": "Adjamé",
+    "subtitle": "Plateau commercial · Abidjan",
+    "description": "Forum des marchés, Marché Gouro et Nouveau Quartier : très forte densité de boutiquiers partenaires et cybercafés relais.",
+    "lat": 5.3579,
+    "lng": -4.0264,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-koumassi",
+    "category": "zone-strategique",
+    "name": "Koumassi",
+    "subtitle": "Commune Sud · Abidjan",
+    "description": "Quartiers Remblais, Prodomo, Grand Campement : réseau distributeurs en croissance pour l'achat comme la recharge.",
+    "lat": 5.2914,
+    "lng": -3.9544,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ab-abobo",
+    "category": "zone-strategique",
+    "name": "Abobo",
+    "subtitle": "Commune Nord · Abidjan",
+    "description": "Avocatier, Sagbé et Agbékoi : nombreux boutiquiers, kiosques et cybercafés partenaires pour l'achat et la recharge.",
+    "lat": 5.4289,
+    "lng": -4.0156,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-bouake",
+    "category": "ville-couverte",
+    "name": "Bouaké",
+    "subtitle": "Centre-Nord · Région du Gbêkê",
+    "description": "2ème ville du pays. Réseau PCS XPRESS opérationnel sur les grands axes commerciaux et les quartiers Air-France, Commerce et Belleville.",
+    "lat": 7.6908,
+    "lng": -5.03,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-yamoussoukro",
+    "category": "ville-couverte",
+    "name": "Yamoussoukro",
+    "subtitle": "Capitale politique · District Autonome",
+    "description": "Boutiquiers et stations-service partenaires présents sur les principaux quartiers du centre et des zones d'habitations.",
+    "lat": 6.8276,
+    "lng": -5.2893,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-sanpedro",
+    "category": "ville-couverte",
+    "name": "San-Pédro",
+    "subtitle": "Région du San-Pédro · Côte Ouest",
+    "description": "Pôle portuaire majeur. La carte PCS XPRESS est disponible dans les quartiers Zimbabwe, Séwéké et le centre-ville commercial.",
+    "lat": 4.7485,
+    "lng": -6.6363,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-korhogo",
+    "category": "ville-couverte",
+    "name": "Korhogo",
+    "subtitle": "Région du Poro · Nord",
+    "description": "Capitale sénoufo. Distribution active, particulièrement autour des marchés principaux et des artères commerçantes.",
+    "lat": 9.458,
+    "lng": -5.6294,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-man",
+    "category": "ville-couverte",
+    "name": "Man",
+    "subtitle": "Région du Tonkpi · Ouest",
+    "description": "Ville des 18 montagnes. Réseau distributeurs couvrant la zone urbaine et les principaux axes commerciaux.",
+    "lat": 7.412,
+    "lng": -7.5542,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-daloa",
+    "category": "ville-couverte",
+    "name": "Daloa",
+    "subtitle": "Région du Haut-Sassandra · Centre-Ouest",
+    "description": "4ème ville du pays. Marchés, boutiquiers et stations-service relais pour l'achat comme la recharge.",
+    "lat": 6.891,
+    "lng": -6.445,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-gagnoa",
+    "category": "ville-couverte",
+    "name": "Gagnoa",
+    "subtitle": "Région du Gôh · Centre-Ouest",
+    "description": "Ville commerciale et étudiante. Réseau PCS XPRESS présent sur les axes centraux et les principaux quartiers résidentiels.",
+    "lat": 6.1319,
+    "lng": -5.9506,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-abengourou",
+    "category": "ville-couverte",
+    "name": "Abengourou",
+    "subtitle": "Région de l'Indénié-Djuablin · Est",
+    "description": "Capitale du royaume Agni-Ndenié. Boutiquiers partenaires présents en centre-ville et dans les secteurs commerçants.",
+    "lat": 6.7295,
+    "lng": -3.4962,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "ci-divo",
+    "category": "ville-couverte",
+    "name": "Divo",
+    "subtitle": "Région du Lôh-Djiboua · Sud-Ouest",
+    "description": "Pôle agricole. Distributeurs présents dans le centre-ville et les quartiers périphériques pour l'achat et la recharge.",
+    "lat": 5.8389,
+    "lng": -5.3589,
+    "services": ["achat", "recharge"]
+  },
+  {
+    "id": "bientot-riviera-faya",
+    "category": "bientot",
+    "name": "Riviera Faya",
+    "subtitle": "Cocody · Abidjan",
+    "description": "Zone résidentielle en forte expansion. Déploiement du réseau PCS XPRESS à venir.",
+    "lat": 5.4089,
+    "lng": -3.9353,
+    "services": []
+  },
+  {
+    "id": "bientot-songon",
+    "category": "bientot",
+    "name": "Songon",
+    "subtitle": "Commune Ouest · Abidjan",
+    "description": "Développement du réseau distributeur programmé pour les prochains mois.",
+    "lat": 5.3311,
+    "lng": -4.2625,
+    "services": []
+  }
+]

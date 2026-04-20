@@ -1,0 +1,222 @@
+/* PCS XPRESS V3 — map.css
+   Styles dédiés à la carte interactive Leaflet (points-de-vente.html uniquement).
+*/
+
+.map-section {
+  padding-block: var(--sp-7) var(--sp-8);
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg, 18px);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+}
+
+#pos-map {
+  width: 100%;
+  height: 540px;
+  z-index: 0;
+  background: #f4f4f2;
+}
+
+@media (max-width: 768px) {
+  #pos-map {
+    height: 380px;
+  }
+}
+
+/* Chips filter bar */
+.pos-map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2, 8px);
+  padding: var(--sp-4, 16px) var(--sp-5, 20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  align-items: center;
+}
+
+.pos-map-filters__label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted, #666);
+  margin-right: var(--sp-2, 8px);
+}
+
+.pos-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.45em 0.95em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  background: #fff;
+  color: #322B3A;
+  user-select: none;
+  line-height: 1.2;
+}
+
+.pos-filter-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.pos-filter-chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.pos-filter-chip:hover {
+  border-color: #322B3A;
+}
+
+.pos-filter-chip--active {
+  background: #322B3A;
+  color: #fff;
+  border-color: #322B3A;
+}
+
+.pos-filter-chip--active .pos-filter-chip__dot {
+  box-shadow: 0 0 0 2px #322B3A, 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Custom divIcon marker */
+.pos-marker {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+}
+
+.pos-marker__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  transition: transform 0.18s ease;
+}
+
+.pos-marker:hover .pos-marker__dot {
+  transform: scale(1.18);
+}
+
+/* Leaflet popup premium override */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 18px 20px !important;
+  font-family: inherit !important;
+  line-height: 1.55 !important;
+  min-width: 220px;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.pos-popup__cat {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.pos-popup__name {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin: 0 0 4px 0;
+  color: #1a1a1a;
+  line-height: 1.25;
+}
+
+.pos-popup__subtitle {
+  font-size: 0.82rem;
+  color: var(--color-text-muted, #6a6a6a);
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.pos-popup__desc {
+  font-size: 0.88rem;
+  margin: 0 0 10px 0;
+  color: #2a2a2a;
+}
+
+.pos-popup__address {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--color-text-muted, #6a6a6a);
+  margin: 0 0 10px 0;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.pos-popup__services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.pos-popup__badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Leaflet controls */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.88) !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+}
+
+.leaflet-control-zoom a {
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  color: #322B3A !important;
+  font-weight: 900 !important;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Legend caption below map */
+.map-caption {
+  margin-top: var(--sp-4, 16px);
+  font-size: 0.82rem;
+  color: var(--color-text-muted, #666);
+  text-align: center;
+  line-height: 1.55;
+}
